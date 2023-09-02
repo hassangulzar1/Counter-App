@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import Styles from "./Button.module.css";
 const Button = (props) => {
-  const [incOrDec, setIncOrDec] = useState("");
-
   const buttonClickHandler = (e) => {
-    setIncOrDec(e.target.value);
-    props.clicking(incOrDec);
+    props.clicking(e.target.value);
   };
 
   return (
